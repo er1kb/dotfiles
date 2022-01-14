@@ -120,4 +120,15 @@ alias config='/usr/bin/git --git-dir=/home/erik/.dotfiles --work-tree=/home/erik
 
 config config --local status.showUntrackedFiles no 
 
+# export PATH="/home/erik/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+
+eval "$(zoxide init bash)"
+
 eval "$(starship init bash)" 
+
+# Generated for envman. Do not edit.
+[ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
+
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

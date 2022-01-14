@@ -1,4 +1,6 @@
 " call plug#begin('C:/Program Files (x86)/Vim/vimfiles/plugged')
+call plug#begin('.vim/pack/')
+Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'itchyny/lightline.vim'
 " Plug 'chrisbra/csv.vim'
 " Plug 'sheerun/vim-wombat-scheme'
@@ -22,9 +24,12 @@
 " Plug 'ncm2/ncm2-path'
 " Plug 'ncm2/ncm2-jedi'
 
-" call plug#end() 
+call plug#end() 
 
-" set encoding=utf-8
+" Plug 'dracula/vim', { 'as': 'dracula' }
+" :PlugInstall
+
+set encoding=utf-8
 " let g:python3_host_prog = 'C:\Users\eribro\AppData\Local\Programs\Python\Python38-32\python.exe'
 " let g:python3_host_prog = 'C:\WINDOWS\py.exe'
 
