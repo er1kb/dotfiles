@@ -161,6 +161,9 @@ alias config='/usr/bin/git --git-dir=/home/erik/.dotfiles --work-tree=/home/erik
 
 config config --local status.showUntrackedFiles no 
 
+# remap fzf up/down
+export FZF_DEFAULT_OPTS='--bind ctrl-k:down,ctrl-l:up,ctrl-j:'
+
 # export PATH="/home/erik/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
