@@ -1,8 +1,13 @@
 " call plug#begin('C:/Program Files (x86)/Vim/vimfiles/plugged')
+
 call plug#begin('.vim/pack/')
 Plug 'dracula/vim', { 'as': 'dracula' }
-" Plug 'itchyny/lightline.vim'
-" Plug 'chrisbra/csv.vim'
+Plug 'itchyny/lightline.vim'
+Plug 'chrisbra/csv.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf.vim'
+Plug 'frazrepo/vim-rainbow' 
+" Plug 'Yggdroot/indentLine' 
 " Plug 'sheerun/vim-wombat-scheme'
 " Plug 'jalvesaq/Nvim-R'
 " Plug 'tpope/vim-surround'
@@ -28,6 +33,7 @@ call plug#end()
 
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " :PlugInstall
+
 
 set encoding=utf-8
 " let g:python3_host_prog = 'C:\Users\eribro\AppData\Local\Programs\Python\Python38-32\python.exe'
@@ -57,6 +63,32 @@ noremap l k
 noremap Ã¶ l
 noremap h /
 
+" Y yanks from cursor to the EOL
+nnoremap Y yg$
+
+" Center curcor when joining lines
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+" replace visual selection without yanking it
+xnoremap p "_dP
+
+" set undo break points while typing
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ? ?<c-g>u
+inoremap ! !<c-g>u
+inoremap ( (<c-g>u
+inoremap ) )<c-g>u
+
+
+" cycle buffers with tab and shift-tab
+nnoremap  <silent>   <tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bnext<CR>
+nnoremap  <silent> <s-tab>  :if &modifiable && !&readonly && &modified <CR> :write<CR> :endif<CR>:bprevious<CR> 
+
+
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Leader key bindings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -67,9 +99,9 @@ let maplocalleader = ","
 
 " ,-l inserts Numbered list in visual block
 vnoremap <leader>l :s/^\s*\zs/\=(line('.') - line("'<")+1).'. '<CR><CR>
-" ,-ö inserts alphabetized list in visual block
+" ,-Ã¶ inserts alphabetized list in visual block
 set nrformats+=alpha 
-vnoremap <leader>ö :s/^\s*\zs/\=nr2char(char2nr('a')+(line('.') - line("'<"))).'. '<CR><CR>
+vnoremap <leader>Ã¶ :s/^\s*\zs/\=nr2char(char2nr('a')+(line('.') - line("'<"))).'. '<CR><CR>
 " Press ,-f to turn off highlighting and clear any message already displayed.
 nmap <silent><leader>f :silent :nohlsearch<CR>
 " Fast saving
@@ -89,7 +121,7 @@ inoremap mkm <C-r>+
 inoremap <leader>n <C-r>= 
 
 inoremap jl <esc>o
-inoremap möjl <esc>imöjl
+inoremap mÃ¶jl <esc>imÃ¶jl
 inoremap mejl <esc>imejl
 
 " inoremap JJ <esc>O<esc>O
@@ -101,13 +133,21 @@ noremap <leader>z :x<CR>
 """"""""""""""""""""""""""""""
 " => Normal mode bindings
 """""""""""""""""""""""""""""" 
-" window navigation
-noremap <C-w>j <C-w>h
-noremap <C-w>k <C-w>j
-noremap <C-w>l <C-w>k
-noremap <c-w>ö <c-w>l
+" window navigation inot working very well - using <C-w><C-w> for now)
+" nnoremap <C-j> <C-W><C-H>
+" nnoremap <C-k> <C-W><C-J>
+" nnoremap <C-l> <C-W><C-K>
+" nnoremap <C-Ã¶> <c-W><C-L>
+" nnoremap <C-j> <C-W>h  
+" nnoremap <C-k> <C-W>j  
+" nnoremap <C-l> <C-W>k  
+" nnoremap <C-Ã¶> <c-W>l  
+" noremap <C-w>j <C-w>h
+" noremap <C-w>k <C-w>j
+" noremap <C-w>l <C-w>k
+" noremap <c-w>Ã¶ <c-w>l
 
-" noremap Ö H " goto first line on screen
+" noremap Ã– H " goto first line on screen
 " noremap H ? " H searches backwards
 " ()=? navigates sentences/blocks 
 noremap = )
@@ -141,15 +181,15 @@ noremap OO O<cr><up>
 
 " L creates a fold by zf{motion} or {Visual}zf
 "     - allows folding an arbitrary number of lines in visual mode!
-" Ö opens a fold
-" Å folds paragraph in the entire document
+" Ã– opens a fold
+" Ã… folds paragraph in the entire document
 " _ resets to manual foldmethod and eliminates all folds
-" Ä folds a single paragraph when fdm=manual
+" Ã„ folds a single paragraph when fdm=manual
 vnoremap L zf
-noremap Ö zo
-nmap Å :call ForceFoldExpr()<CR>
+noremap Ã– zo
+nmap Ã… :call ForceFoldExpr()<CR>
 noremap _ :set foldmethod=manual<CR>zE
-nmap Ä zfap
+nmap Ã„ zfap
 
 " Start interactive EasyAlign for a motion/text object (e.g. gaip)
 nmap ga <Plug>(EasyAlign)
@@ -176,8 +216,6 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " mk yanks to clipboard in visual mode
 vnoremap mk "+y
 
-" replace visual selection without yanking it
-vnoremap p "_dP
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
 xmap ga <Plug>(EasyAlign)
@@ -243,6 +281,9 @@ set scrolloff=3
 "Forget compatibility with Vi. Who cares.
 set nocompatible
 
+" disable swap files
+set noswapfile
+
 "Enable filetypes
 filetype on
 filetype plugin on
@@ -305,6 +346,10 @@ set incsearch
 
 "Highlight searching
 set hlsearch
+highlight Search cterm=bold 
+highlight Search term=bold 
+highlight Search ctermfg=black
+highlight Search ctermbg=white
 
 " case insensitive search
 set ignorecase

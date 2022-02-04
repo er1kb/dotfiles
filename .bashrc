@@ -2,6 +2,19 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+# set vim mode
+set -o vi
+bind -m vi 'j':'backward-char'
+bind -m vi 'k':'history-search-forward'
+bind -m vi 'l':'history-search-backward'
+bind -m vi 'ö':'forward-char'
+bind '"jk":vi-movement-mode'
+
+# CAPS selects level 3 = {[]} etc.
+setxkbmap -option "lv3:caps_switch"
+# setxkbmap -option "lv3:ralt_switch"
+# setxkbmap -option "ctrl:nocaps"
+
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
@@ -116,6 +129,34 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Custom functions (aliases that take arguments)
+
+# print line(s) $1 from text file(s) $2
+println(){
+   if [ "$#" -lt 2 ]; then 
+      awk -v arg1="$1" 'FNR==arg1 {print FILENAME, $0}' *.csv | column -t
+   else 
+      awk -v arg1="$1" 'FNR==arg1 {print FILENAME, $0}' $2 | column -t
+   fi
+}
+
+# count lines in file(s)
+# if no argument given, print total number of lines in each file
+countln(){
+if [ $# -lt 1 ]
+   then
+      printf "\nTotalt antal rader:\n"
+      find . -name '*.csv' | xargs wc -l | cat
+   else
+      printf "\nUnika träffar:\n"
+      grep -oci "$1" $2 | grep -v :0 | column -t -s ':' | sort -k 2 -n -r | cat
+      printf "\nAntal rader:\n"
+      grep -c -i "$1" $2 | column -t -s ':' | sort -k 2 -n -r | cat
+   fi
+}
+
+
+
 alias config='/usr/bin/git --git-dir=/home/erik/.dotfiles --work-tree=/home/erik'
 
 config config --local status.showUntrackedFiles no 
@@ -123,12 +164,18 @@ config config --local status.showUntrackedFiles no
 # export PATH="/home/erik/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
-eval "$(zoxide init bash)"
+export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
+export EDITOR=/usr/bin/vim
 
-eval "$(starship init bash)" 
+export TORCH_CUDA_ARCH_LIST="8.6"
+export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
-
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
+
+eval "$(zoxide init bash)"
+
+eval "$(starship init bash)" 
