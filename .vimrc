@@ -113,6 +113,14 @@ nmap <leader>- :Vexplore<CR>
 " text mode: Make a list with ,-a
 autocmd FileType text nmap <leader>a :call AutoList()<CR>
 
+""""""""""""""""""""""""""""""
+" => Insert mode bindings
+""""""""""""""""""""""""""""""
+" Substitute the escape button for command mode
+inoremap jk <esc>
+" kj = new line insert
+inoremap kj <Enter>
+
 " Paste from clipboard
 noremap mk "+p
 inoremap mkm <C-r>+
@@ -238,13 +246,6 @@ runtime macros/matchit.vim
 
 
 
-""""""""""""""""""""""""""""""
-" => Insert mode bindings
-""""""""""""""""""""""""""""""
-" Substitute the escape button for command mode
-:inoremap jk <Esc>
-" kj = new line insert
-:inoremap kj <Enter>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General / UI settings

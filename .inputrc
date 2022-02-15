@@ -1,0 +1,2 @@
+# re-enable ctrl+l which seems to be disabled by vi mode
+"\C-l":clear-screen 

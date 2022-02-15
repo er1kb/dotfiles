@@ -1,0 +1,27 @@
+[user]
+	email = erik.broman@malmo.se
+	name = Erik Broman
+
+[include]
+   path = ~/.config/git/themes.gitconfig
+
+[core]
+   pager = delta
+
+[interactive]
+   diffFilter = delta --color-only
+
+[delta]
+   navigate = true  # use n and N to move between diff sections
+   features = woolly-mammoth 
+   side-by-side = true
+
+# woolly-mammoth
+# calochortus-lyallii
+# mantis-shrimp-lite
+
+[merge]
+   conflictstyle = diff3
+
+[diff]
+   colorMoved = default
