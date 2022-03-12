@@ -198,6 +198,14 @@ export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
 
+BASE16_SHELL="$HOME/.config/base16-shell/"
+[ -n "$PS1" ] && \
+       [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+               eval "$("$BASE16_SHELL/profile_helper.sh")"
+
 eval "$(zoxide init bash)"
 
 eval "$(starship init bash)" 
+
+# moved to /etc/profile.d/prevent_sleep:
+# xset s off && xset -dpms

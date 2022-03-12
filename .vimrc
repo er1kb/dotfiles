@@ -1,12 +1,14 @@
 " call plug#begin('C:/Program Files (x86)/Vim/vimfiles/plugged')
 
 call plug#begin('.vim/pack/')
-Plug 'dracula/vim', { 'as': 'dracula' }
+" Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'itchyny/lightline.vim'
 Plug 'chrisbra/csv.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf.vim'
 Plug 'frazrepo/vim-rainbow' 
+Plug 'chriskempson/base16-vim'
+Plug 'junegunn/rainbow-parentheses.vim' 
 " Plug 'Yggdroot/indentLine' 
 " Plug 'sheerun/vim-wombat-scheme'
 " Plug 'jalvesaq/Nvim-R'
@@ -34,6 +36,18 @@ call plug#end()
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " :PlugInstall
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+    source ~/.vimrc_background
+ endif
+
+" set background=dark
+
+" set termguicolors
+colorscheme base16-default-dark
+
+" set background=light
+" colorscheme solarized
 
 set encoding=utf-8
 " let g:python3_host_prog = 'C:\Users\eribro\AppData\Local\Programs\Python\Python38-32\python.exe'
@@ -116,10 +130,10 @@ autocmd FileType text nmap <leader>a :call AutoList()<CR>
 """"""""""""""""""""""""""""""
 " => Insert mode bindings
 """"""""""""""""""""""""""""""
-" Substitute the escape button for command mode
+" Substitute the escape button for entering normal mode
 inoremap jk <esc>
-" kj = new line insert
-inoremap kj <Enter>
+" kl = something
+" inoremap kl <Enter>
 
 " Paste from clipboard
 noremap mk "+p
@@ -127,6 +141,7 @@ inoremap mkm <C-r>+
 
 " calculate number (which is entered in command mode)
 inoremap <leader>n <C-r>= 
+
 
 inoremap jl <esc>o
 inoremap möjl <esc>imöjl
@@ -229,7 +244,6 @@ vnoremap mk "+y
 xmap ga <Plug>(EasyAlign)
 
 " Appearance
-" colorscheme wombat
 " set transparency=0
 
 " Keep a longer history
@@ -257,7 +271,7 @@ runtime macros/matchit.vim
 set nocp
 filetype plugin on 
 " Tab specific option
-set tabstop=8                   "A tab is 8 spaces
+set tabstop=4                   "A tab is 8 spaces
 set expandtab                   "Always uses spaces instead of tabs
 set softtabstop=4               "Insert 4 spaces when tab is pressed
 set shiftwidth=4                "An indent is 4 spaces
@@ -307,11 +321,6 @@ set hidden
 "Set font type and size. Depends on the resolution. Larger screens, prefer h20
 set guifont=Menlo:h14
 
-"Tab stuff
-set tabstop=3
-set shiftwidth=3
-set softtabstop=3
-set expandtab
 
 "Show command in bottom right portion of the screen
 set showcmd

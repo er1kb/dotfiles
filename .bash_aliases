@@ -32,3 +32,5 @@ alias showkey_="stdbuf -o0 showkey -a | cat -"
 alias venv="source venv/bin/activate"
 alias f="fzf --preview 'batcat --style=numbers --color=always --line-range :500 {}'"
 alias unpack=extractAllTypeFiles 
+alias users="source '$HOME/.config/bash_scripts/listusers.bash'"
+alias sudoers="grep '^sudo:.*$' /etc/group | cut -d: -f4"
