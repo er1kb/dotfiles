@@ -3,35 +3,34 @@
 These are a few of the applications I currently use:   
 
 ## Data analysis
-[Elastic stack](https://www.postgresql.org/)  
-[Postgres](https://www.postgresql.org/)  
-[Visidata](https://github.com/saulpw/visidata)  
+* [Elastic stack](https://www.postgresql.org/)  
+* [Postgres](https://www.postgresql.org/)  
+* [Visidata](https://github.com/saulpw/visidata)  
 
 ## System
-[Alacritty](https://github.com/alacritty/alacritty) terminal  
-[Bandwhich](https://github.com/imsnif/bandwhich)  
-[Base16](https://github.com/chriskempson/base16) colour scheme(s) (Tomorrow-night)  
-Bash shell (and trying out [Fish](https://github.com/fish-shell/fish-shell))  
-[Bat](https://github.com/sharkdp/bat) file viewer  
-[Btm](https://github.com/ClementTsang/bottom) system monitor  
-[Dust](https://github.com/bootandy/dust)  
-[Fd-find](https://github.com/sharkdp/fd)  
-[Fzf](https://github.com/junegunn/fzf) fuzzy finder  
-[Delta](https://github.com/dandavison/delta) git diff viewer  
-[Hyperfine](https://github.com/sharkdp/hyperfine)  
-[LeftWM](https://leftwm.org/) window manager  
-[Neovim](https://neovim.io/) text editor  
-[Nerd fonts](https://www.nerdfonts.com/) (Hack)  
-[Procs](https://github.com/dalance/procs)  
-[Ripgrep](https://github.com/BurntSushi/ripgrep) text search  
-[sd](https://github.com/chmln/sd) search/replace  
-[Starship](https://starship.rs/guide/) prompt  
-[Vim](https://www.vim.org/) text editor  
-[Zoxide](https://github.com/ajeetdsouza/zoxide) clever shell navigation  
+* [Alacritty](https://github.com/alacritty/alacritty) terminal  
+* [Bandwhich](https://github.com/imsnif/bandwhich)  
+* [Base16](https://github.com/chriskempson/base16) colour scheme(s) (Tomorrow-night)  
+* Bash shell (and trying out [Fish](https://github.com/fish-shell/fish-shell))  
+* [Bat](https://github.com/sharkdp/bat) file viewer  
+* [Btm](https://github.com/ClementTsang/bottom) system monitor  
+* [Dust](https://github.com/bootandy/dust)  
+* [Fd-find](https://github.com/sharkdp/fd)  
+* [Fzf](https://github.com/junegunn/fzf) fuzzy finder  
+* [Delta](https://github.com/dandavison/delta) git diff viewer  
+* [Hyperfine](https://github.com/sharkdp/hyperfine)  
+* [LeftWM](https://leftwm.org/) window manager  
+* [Nerd fonts](https://www.nerdfonts.com/) (Hack)  
+* [Procs](https://github.com/dalance/procs)  
+* [Ripgrep](https://github.com/BurntSushi/ripgrep) text search  
+* [sd](https://github.com/chmln/sd) search/replace  
+* [Starship](https://starship.rs/guide/) prompt  
+* [Vim](https://www.vim.org/) text editor (and trying out [Neovim](https://neovim.io/))  
+* [Zoxide](https://github.com/ajeetdsouza/zoxide) clever shell navigation  
 
 # Learn more / inspiration
-[DistroTube](https://distro.tube/) ([dotfiles](https://gitlab.com/dwt1/dotfiles))  
-[The Primeagen](https://github.com/ThePrimeagen) ([dotfiles](https://github.com/ThePrimeagen/.dotfiles))  
+* [DistroTube](https://distro.tube/) ([dotfiles](https://gitlab.com/dwt1/dotfiles))  
+* [The Primeagen](https://github.com/ThePrimeagen) ([dotfiles](https://github.com/ThePrimeagen/.dotfiles))  
 
 These dotfiles are managed with a [Git Bare Repository](https://www.youtube.com/watch?v=tBoLDpTWVOM).  
 
