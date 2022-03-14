@@ -1,9 +1,6 @@
-[user]
-	email = erik.broman@malmo.se
-	name = Erik Broman
-
 [include]
    path = ~/.config/git/themes.gitconfig
+   path = ~/.config/.gitconfig_local
 
 [core]
    pager = delta

@@ -192,6 +192,8 @@ export EDITOR=/usr/bin/vim
 export TORCH_CUDA_ARCH_LIST="8.6"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
 
+source "$HOME/.config/.git_token"
+
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"
 
