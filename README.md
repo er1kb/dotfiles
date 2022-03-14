@@ -1,11 +1,18 @@
 # dotfiles
 
-These are a few of the applications I currently use:   
+Current toolbox:   
 
-## Data analysis
-* [Elastic stack](https://www.postgresql.org/)  
+## Data science
+* [Elastic stack](https://www.elastic.co/)  
 * [Postgres](https://www.postgresql.org/)  
-* [Visidata](https://github.com/saulpw/visidata)  
+* [Python3](https://www.python.org/)  
+* [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/) and the [Tidyverse](https://www.tidyverse.org/)  
+* [Vim](https://www.vim.org/) text editor (and trying out [Neovim](https://neovim.io/))  
+* [Visidata](https://github.com/saulpw/visidata) - the path towards Excel independence and more  
+
+## NLP
+* [Huggingface Transformers](https://github.com/huggingface/transformers)  
+* [Svensktext](https://github.com/peterdalle/svensktext) Swedish corpuses  
 
 ## System
 * [Alacritty](https://github.com/alacritty/alacritty) terminal  
@@ -19,13 +26,12 @@ These are a few of the applications I currently use:
 * [Fzf](https://github.com/junegunn/fzf) fuzzy finder  
 * [Delta](https://github.com/dandavison/delta) git diff viewer  
 * [Hyperfine](https://github.com/sharkdp/hyperfine)  
-* [LeftWM](https://leftwm.org/) window manager  
+* [LeftWM](https://github.com/leftwm/leftwm) window manager  
 * [Nerd fonts](https://www.nerdfonts.com/) (Hack)  
 * [Procs](https://github.com/dalance/procs)  
 * [Ripgrep](https://github.com/BurntSushi/ripgrep) text search  
 * [sd](https://github.com/chmln/sd) search/replace  
 * [Starship](https://starship.rs/guide/) prompt  
-* [Vim](https://www.vim.org/) text editor (and trying out [Neovim](https://neovim.io/))  
 * [Zoxide](https://github.com/ajeetdsouza/zoxide) clever shell navigation  
 
 # Learn more / inspiration
