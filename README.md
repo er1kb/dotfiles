@@ -32,6 +32,7 @@ Current toolbox:
 * [Ripgrep](https://github.com/BurntSushi/ripgrep) text search  
 * [sd](https://github.com/chmln/sd) search/replace  
 * [Starship](https://starship.rs/guide/) prompt  
+* [Tmux](https://github.com/tmux/tmux) and [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) for persistent terminal sessions  
 * [Zoxide](https://github.com/ajeetdsouza/zoxide) clever shell navigation  
 
 # Learn more / inspiration
