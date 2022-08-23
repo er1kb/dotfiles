@@ -7,8 +7,8 @@ Current toolbox:
 * [Postgres](https://www.postgresql.org/)  
 * [Python3](https://www.python.org/)  
 * [R](https://www.r-project.org/), [RStudio](https://www.rstudio.com/) and the [Tidyverse](https://www.tidyverse.org/)  
-* [Vim](https://www.vim.org/) text editor (and trying out [Neovim](https://neovim.io/))  
-* [Visidata](https://github.com/saulpw/visidata) - the path towards Excel independence and more  
+* [Neovim](https://neovim.io/) text editor
+* [Visidata](https://github.com/saulpw/visidata) - an amazing command line interface for data exploration
 
 ## NLP
 * [Huggingface Transformers](https://github.com/huggingface/transformers)  
