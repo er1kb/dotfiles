@@ -155,6 +155,12 @@ if [ $# -lt 1 ]
    fi
 }
 
+lsr(){
+for d in */; do
+    ls $d
+done
+}
+
 extractAllTypeFiles(){ 
       if [ -f $1 ] ; then 
       case $1 in 
