@@ -232,6 +232,11 @@ _G.packer_plugins = {
     path = "/home/erik/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
     url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
   },
+  ["telescope-zoxide"] = {
+    loaded = true,
+    path = "/home/erik/.local/share/nvim/site/pack/packer/start/telescope-zoxide",
+    url = "https://github.com/jvgrootveld/telescope-zoxide"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/erik/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -264,14 +269,14 @@ time([[Defining packer_plugins]], false)
 time([[Config for aerial.nvim]], true)
 try_loadstring("\27LJ\2\0024\0\0\2\0\3\0\0066\0\0\0'\1\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\vaerial\frequire\0", "config", "aerial.nvim")
 time([[Config for aerial.nvim]], false)
--- Config for: nvim-surround
-time([[Config for nvim-surround]], true)
-try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
-time([[Config for nvim-surround]], false)
 -- Config for: mkdnflow.nvim
 time([[Config for mkdnflow.nvim]], true)
 try_loadstring("\27LJ\2\2:\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\rmkdnflow\frequire\0", "config", "mkdnflow.nvim")
 time([[Config for mkdnflow.nvim]], false)
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\2?\0\0\2\0\3\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0004\1\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
 if should_profile then save_profiles() end
 
 end)

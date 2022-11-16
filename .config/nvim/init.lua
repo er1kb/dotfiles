@@ -21,6 +21,7 @@ require('erik.which-key')
 require('erik.harpoon')
 require('erik.markdown-preview')
 require('erik.mkdnflow')
+require('erik.telescope-zoxide')
 
 require('lualine').setup()
 --{ options = { theme = base16 } }

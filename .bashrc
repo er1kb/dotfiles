@@ -21,6 +21,8 @@ case $- in
       *) return;;
 esac
 
+# sudo journalctl --unit kibana | tail
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -182,7 +184,10 @@ extractAllTypeFiles(){
    fi 
 } 
 
-alias config='/usr/bin/git --git-dir=/home/erik/.dotfiles --work-tree=/home/erik'
+alias config='/usr/bin/git --git-dir=/home/erik/.dotfiles --work-tree=$HOME'
+alias vd-plugins='/usr/bin/git --git-dir=/home/erik/.visidata --work-tree=$HOME/.visidata'
+alias lgconfig='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias lg='lazygit'
 
 config config --local status.showUntrackedFiles no 
 
@@ -199,6 +204,7 @@ export TORCH_CUDA_ARCH_LIST="8.6"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
 
 source "$HOME/.config/.git_token"
+source "$HOME/.secret"
 
 # Generated for envman. Do not edit.
 [ -s "$HOME/.config/envman/load.sh" ] && source "$HOME/.config/envman/load.sh"

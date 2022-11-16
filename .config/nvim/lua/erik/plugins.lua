@@ -60,6 +60,7 @@ return packer.startup(function(use)
   use 'ThePrimeagen/harpoon'
   use "nvim-telescope/telescope.nvim"
   use 'nvim-telescope/telescope-media-files.nvim'
+  use 'jvgrootveld/telescope-zoxide'
   use 'unblevable/quick-scope'
   use 'justinmk/vim-sneak'
   use "folke/which-key.nvim"
@@ -79,7 +80,7 @@ return packer.startup(function(use)
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icons
     },
-    --[[ tag = 'nightly' -- optional, updated every week. (see issue #1193) ]]
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
 
   -- CMP plugins

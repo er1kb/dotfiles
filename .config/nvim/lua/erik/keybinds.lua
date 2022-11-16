@@ -97,6 +97,7 @@ map('i', 'JL', '<Esc>O')
 -- VISUAL MODE
 -- Replace visual selection without yanking it
 map('v', 'p', '"_dP')
+map('v', '<Space>', '<Esc>') -- Space key escapes visual mode
 
 -- mk yanks to clipboard in visual mode
 map('x', 'mk', '"+y')
@@ -148,6 +149,7 @@ map("", "<leader>c", "gcc")
 --
 -- These functions are stored in harpoon.  A plugn that I am developing
 map("n", "<leader>a", function() require("harpoon.mark").add_file() end)
+map("n", "<leader>q", function() require("harpoon.mark").clear_all() end)
 map("n","<C-e>", function() require("harpoon.ui").toggle_quick_menu() end)
 
 map("n","<C-j>", "<cmd>lua require('harpoon.ui').nav_file(1)<CR>")
@@ -158,3 +160,8 @@ map("n","<C-ö>", "<cmd>lua require('harpoon.ui').nav_file(4)<CR>")
 --map("n", "<C-s>", "<cmd>lua require('markdown-preview').MarkdownPreview<CR>")
 --map("n", "<M-s>", "<cmd>lua require('markdown-preview').MarkdownPreviewStop<CR>")
 map("n", "<C-p>", ":MarkdownPreviewToggle<CR>")
+
+map("n", "<Leader>cd", ":lua require'telescope'.extensions.zoxide.list{}<CR>")
+
+map("n", "<Leader>b", "<cmd>lua _LAZYGIT_TOGGLE()<CR>")
+map("n", "<Leader>l", "<cmd>lua _PYTHON_TOGGLE()<CR>")
