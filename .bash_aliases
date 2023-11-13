@@ -44,9 +44,14 @@ alias install_torch="ltt install --pytorch-computation-backend=cu116 --pytorch-c
 alias colors="curl -s https://gist.githubusercontent.com/HaleTom/89ffe32783f89f403bba96bd7bcd1263/raw/e50a28ec54188d2413518788de6c6367ffcea4f7/print256colours.sh | bash"
 alias colours=colors
 fgkdb () {
-    vdsql postgres://$FGKDB_UN:$FGKDB_PW@$FGKDB_URL/fgkdb --postgres-schema=$1
+    vd postgres://$FGKDB_UN:$FGKDB_PW@$FGKDB_URL/fgkdb --postgres-schema=$1
 }
 kd () {
-    vdsql postgres://$KD_UN:$KD_PW@$KD_URL/kundservice --postgres-schema=$1
+    vd postgres://$KD_UN:$KD_PW@$KD_URL/kundservice --postgres-schema=$1
 }
-
+# fgkdb () {
+#    vdsql postgres://$FGKDB_UN:$FGKDB_PW@$FGKDB_URL/fgkdb --postgres-schema=$1
+# }
+# kd () {
+#    vdsql postgres://$KD_UN:$KD_PW@$KD_URL/kundservice --postgres-schema=$1
+# }

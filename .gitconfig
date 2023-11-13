@@ -2,6 +2,10 @@
    path = ~/.config/git/themes.gitconfig
    path = ~/.config/.gitconfig_local
 
+[safe]
+   directory = *
+	directory = *
+
 [core]
    pager = delta
 

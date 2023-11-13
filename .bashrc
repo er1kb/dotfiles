@@ -184,17 +184,17 @@ extractAllTypeFiles(){
    fi 
 } 
 
-alias config='/usr/bin/git --git-dir=/home/erik/.dotfiles --work-tree=$HOME'
-alias vd-plugins='/usr/bin/git --git-dir=/home/erik/.visidata --work-tree=$HOME/.visidata'
+alias config='/usr/bin/git --git-dir=/home/fgkadm/dotfiles/.git --work-tree=$HOME'
+alias vd-plugins='/usr/bin/git --git-dir=/home/fgkadm/.visidata --work-tree=$HOME/.visidata'
 alias lgconfig='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias lg='lazygit'
 
-config config --local status.showUntrackedFiles no 
+# config config --local status.showUntrackedFiles no 
 
 # remap fzf up/down
 export FZF_DEFAULT_OPTS='--bind ctrl-k:down,ctrl-l:up,ctrl-j:'
 
-# export PATH="/home/erik/.local/bin:$PATH"
+# export PATH="/home/fgkadm/.local/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 export PATH=/usr/local/cuda/bin${PATH:+:${PATH}}
@@ -202,6 +202,9 @@ export EDITOR=/usr/bin/vim
 
 export TORCH_CUDA_ARCH_LIST="8.6"
 export LD_LIBRARY_PATH="/usr/local/cuda/lib64"
+
+export MODULAR_HOME="/home/fgkadm/.modular"
+export PATH="/home/fgkadm/.modular/pkg/packages.modular.com_mojo/bin:$PATH"
 
 source "$HOME/.config/.git_token"
 source "$HOME/.secret"

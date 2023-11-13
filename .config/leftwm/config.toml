@@ -2,7 +2,7 @@ modkey = "Mod4"
 mousekey = "Mod4"
 workspaces = []
 tags = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
-layouts = ["GridHorizontal", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
+# layouts = ["GridHorizontal", "Monocle", "RightWiderLeftStack", "LeftWiderRightStack"]
 layout_mode = "Workspace"
 scratchpad = []
 window_rules = []
@@ -24,6 +24,12 @@ modifier = ["modkey"]
 key = "m"
 
 [[keybind]]
+command = "Execute"
+value = "firefox"
+modifier = ["modkey"]
+key = "u"
+
+[[keybind]]
 command = "CloseWindow"
 value = ""
 modifier = ["modkey", "Shift"]
@@ -41,11 +47,11 @@ value = "loginctl kill-session $XDG_SESSION_ID"
 modifier = ["modkey", "Shift"]
 key = "x"
 
-[[keybind]]
-command = "Execute"
-value = "slock"
-modifier = ["modkey", "Control"]
-key = ""
+# [[keybind]]
+# command = "Execute"
+# value = "slock"
+# modifier = ["modkey", "Control"]
+# key = ""
 
 [[keybind]]
 command = "MoveToLastWorkspace"
@@ -59,17 +65,17 @@ value = ""
 modifier = ["modkey"]
 key = "w"
 
-[[keybind]]
-command = "MoveWindowUp"
-value = ""
-modifier = ["modkey", "Shift"]
-key = ""
+# [[keybind]]
+# command = "MoveWindowUp"
+# value = ""
+# modifier = ["modkey", "Shift"]
+# key = ""
 
-[[keybind]]
-command = "MoveWindowDown"
-value = ""
-modifier = ["modkey", "Shift"]
-key = ""
+# [[keybind]]
+# command = "MoveWindowDown"
+# value = ""
+# modifier = ["modkey", "Shift"]
+# key = ""
 
 [[keybind]]
 command = "MoveWindowTop"
@@ -77,29 +83,29 @@ value = ""
 modifier = ["modkey"]
 key = "h"
 
-[[keybind]]
-command = "FocusWindowUp"
-value = ""
-modifier = ["modkey"]
-key = ""
+# [[keybind]]
+# command = "FocusWindowUp"
+# value = ""
+# modifier = ["modkey"]
+# key = ""
 
-[[keybind]]
-command = "FocusWindowDown"
-value = ""
-modifier = ["modkey"]
-key = ""
+# [[keybind]]
+# command = "FocusWindowDown"
+# value = ""
+# modifier = ["modkey"]
+# key = ""
 
-[[keybind]]
-command = "FocusWorkspaceNext"
-value = ""
-modifier = ["modkey"]
-key = ""
+# [[keybind]]
+# command = "FocusWorkspaceNext"
+# value = ""
+# modifier = ["modkey"]
+# key = ""
 
-[[keybind]]
-command = "FocusWorkspacePrevious"
-value = ""
-modifier = ["modkey"]
-key = ""
+# [[keybind]]
+# command = "FocusWorkspacePrevious"
+# value = ""
+# modifier = ["modkey"]
+# key = ""
 
 [[keybind]]
 command = "MoveWindowUp"
@@ -149,17 +155,17 @@ value = "5"
 modifier = ["modkey", "Control"]
 key = "j"
 
-[[keybind]]
-command = "FocusWorkspaceNext"
-value = ""
-modifier = ["modkey"]
-key = ""
+# [[keybind]]
+# command = "FocusWorkspaceNext"
+# value = ""
+# modifier = ["modkey"]
+# key = ""
 
-[[keybind]]
-command = "FocusWorkspacePrevious"
-value = ""
-modifier = ["modkey"]
-key = ""
+# [[keybind]]
+# command = "FocusWorkspacePrevious"
+# value = ""
+# modifier = ["modkey"]
+# key = ""
 
 [[keybind]]
 command = "GotoTag"
